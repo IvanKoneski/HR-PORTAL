@@ -1,0 +1,17 @@
+C:\Users\Ivan\Desktop\Dimplomska\App\hr-portal\HrPortal.Infrastructure\bin\Debug\net8.0\HrPortal.Infrastructure.deps.json
+C:\Users\Ivan\Desktop\Dimplomska\App\hr-portal\HrPortal.Infrastructure\bin\Debug\net8.0\HrPortal.Infrastructure.runtimeconfig.json
+C:\Users\Ivan\Desktop\Dimplomska\App\hr-portal\HrPortal.Infrastructure\bin\Debug\net8.0\HrPortal.Infrastructure.dll
+C:\Users\Ivan\Desktop\Dimplomska\App\hr-portal\HrPortal.Infrastructure\bin\Debug\net8.0\HrPortal.Infrastructure.pdb
+C:\Users\Ivan\Desktop\Dimplomska\App\hr-portal\HrPortal.Infrastructure\bin\Debug\net8.0\HrPortal.Domain.dll
+C:\Users\Ivan\Desktop\Dimplomska\App\hr-portal\HrPortal.Infrastructure\bin\Debug\net8.0\HrPortal.Domain.pdb
+C:\Users\Ivan\Desktop\Dimplomska\App\hr-portal\HrPortal.Infrastructure\obj\Debug\net8.0\HrPortal.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Ivan\Desktop\Dimplomska\App\hr-portal\HrPortal.Infrastructure\obj\Debug\net8.0\HrPortal.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ivan\Desktop\Dimplomska\App\hr-portal\HrPortal.Infrastructure\obj\Debug\net8.0\HrPortal.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Ivan\Desktop\Dimplomska\App\hr-portal\HrPortal.Infrastructure\obj\Debug\net8.0\HrPortal.Infrastructure.AssemblyInfo.cs
+C:\Users\Ivan\Desktop\Dimplomska\App\hr-portal\HrPortal.Infrastructure\obj\Debug\net8.0\HrPortal.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Ivan\Desktop\Dimplomska\App\hr-portal\HrPortal.Infrastructure\obj\Debug\net8.0\HrPortal.D3FEC67D.Up2Date
+C:\Users\Ivan\Desktop\Dimplomska\App\hr-portal\HrPortal.Infrastructure\obj\Debug\net8.0\HrPortal.Infrastructure.dll
+C:\Users\Ivan\Desktop\Dimplomska\App\hr-portal\HrPortal.Infrastructure\obj\Debug\net8.0\refint\HrPortal.Infrastructure.dll
+C:\Users\Ivan\Desktop\Dimplomska\App\hr-portal\HrPortal.Infrastructure\obj\Debug\net8.0\HrPortal.Infrastructure.pdb
+C:\Users\Ivan\Desktop\Dimplomska\App\hr-portal\HrPortal.Infrastructure\obj\Debug\net8.0\HrPortal.Infrastructure.genruntimeconfig.cache
+C:\Users\Ivan\Desktop\Dimplomska\App\hr-portal\HrPortal.Infrastructure\obj\Debug\net8.0\ref\HrPortal.Infrastructure.dll

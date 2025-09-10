@@ -1,0 +1,18 @@
+# Ignore Visual Studio files
+.vs/
+*.user
+*.suo
+
+# .NET build folders
+hr-portal/bin/
+hr-portal/obj/
+
+# React / Node
+hr-portal-web/node_modules/
+hr-portal-web/dist/
+
+# Logs & misc
+*.log
+.env
+.vscode/
+.DS_Store

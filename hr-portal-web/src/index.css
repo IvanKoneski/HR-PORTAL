@@ -1,0 +1,357 @@
+/* ===== Global Reset ===== */
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important; /* Let pages set their own background */
+  color: inherit;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Remove Vite boilerplate (no body flex centering, no :root background) */
+
+/* Links (optional – can be customized later) */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Buttons (keep simple, your page overrides with inline styles) */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Login input placeholder styling */
+.loginDarkInput::placeholder {
+  color: rgba(148, 163, 184, 0.55); /* slate-400/55 */
+  font-size: 13px;
+}
+/* optional: remove spinners in date inputs (chrome) for cleaner look */
+input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(0.8); opacity: .85; }
+
+/* === Top App Bar === */
+.appNav {
+  position: sticky; top: 0; z-index: 50;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px; padding: 10px 16px;
+  background: linear-gradient(180deg, rgba(8,12,22,0.95), rgba(8,12,22,0.90));
+  border-bottom: 1px solid rgba(99,102,241,0.18);
+  backdrop-filter: blur(6px);
+}
+
+/* Left links */
+.appNav-left { display: flex; gap: 14px; }
+
+/* Base link */
+.appNav .nav-link {
+  color: rgba(203,213,225,0.85);
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  transition: background 120ms, color 120ms, border-color 120ms, box-shadow 120ms;
+}
+.appNav .nav-link:hover {
+  color: #ffffff;
+  background: rgba(99,102,241,0.10);
+  border-color: rgba(99,102,241,0.25);
+}
+
+/* Active link (current page) */
+.appNav .nav-link.active,
+.appNav a[aria-current="page"] { /* fallback if you're already using NavLink */
+  color: #ffffff;
+  background: linear-gradient(90deg, rgba(59,130,246,0.18), rgba(139,92,246,0.18));
+  border-color: rgba(99,102,241,0.40);
+  box-shadow: 0 6px 18px rgba(99,102,241,0.28);
+}
+
+/* Right side (user + logout) */
+.appNav-right { display: flex; align-items: center; gap: 10px; }
+.appNav-right .user { color: rgba(203,213,225,0.85); }
+
+/* Logout button/link */
+.appNav .nav-logout {
+  color: #ffffff;
+  background: rgba(2,6,23,0.40);
+  border: 1px solid rgba(148,163,184,0.25);
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: filter 120ms, box-shadow 120ms, background 120ms, border-color 120ms;
+}
+.appNav .nav-logout:hover {
+  filter: brightness(1.08);
+  border-color: rgba(99,102,241,0.45);
+  box-shadow: 0 8px 20px rgba(99,102,241,0.28);
+}
+
+/* ===== Admin (Figma-like) ===== */
+
+.admin-surface {
+  min-height: 100vh;
+  background: radial-gradient(1200px 600px at 20% -10%, rgba(59,130,246,.10), transparent),
+              radial-gradient(1000px 600px at 120% 10%, rgba(139,92,246,.10), transparent),
+              #0a0f1a;
+  color: #e5e7eb;
+}
+
+.container {
+  max-width: 1120px;
+  margin: 24px auto;
+  padding: 0 16px 48px;
+}
+
+.page-title {
+  display: flex; align-items: center; gap: 12px;
+  margin: 10px 0 18px;
+}
+.page-title h1 { font-size: 24px; margin: 0; }
+.title-icon { width: 32px; height: 32px; border-radius: 12px; background: rgba(99,102,241,.25); box-shadow: inset 0 0 0 1px rgba(99,102,241,.35); }
+
+/* Cards */
+.card {
+  background: rgba(17,24,39,.75);
+  border: 1px solid rgba(148,163,184,.20);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(2,6,23,.35);
+  overflow: hidden;
+  margin-bottom: 22px;
+}
+.card-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 16px;
+  background: linear-gradient(90deg, rgba(59,130,246,.10), rgba(139,92,246,.10));
+  border-bottom: 1px solid rgba(148,163,184,.18);
+}
+.card-title { display: flex; align-items: center; gap: 10px; font-weight: 600; }
+.title-chip { width: 28px; height: 28px; border-radius: 10px; background: rgba(99,102,241,.25); border: 1px solid rgba(99,102,241,.35); }
+.title-chip.users { background: rgba(59,130,246,.22); border-color: rgba(59,130,246,.35); }
+.title-chip.calendar { background: rgba(139,92,246,.22); border-color: rgba(139,92,246,.35); }
+.title-chip.clock { background: rgba(20,184,166,.22); border-color: rgba(20,184,166,.35); }
+.card-body { padding: 16px; }
+
+/* Messages */
+.info { margin: 8px 0 12px; color: #cbd5e1; }
+
+/* Table */
+.table-wrap { border: 1px solid rgba(148,163,184,.20); border-radius: 10px; overflow: hidden; }
+.table { width: 100%; border-collapse: collapse; }
+.table thead tr { background: rgba(148,163,184,.08); }
+.table th, .table td { text-align: left; padding: 10px 12px; border-bottom: 1px solid rgba(148,163,184,.14); }
+.table tr:hover td { background: rgba(148,163,184,.06); }
+.nowrap { white-space: nowrap; }
+
+/* Inputs */
+.inp {
+  height: 34px; padding: 6px 10px; border-radius: 999px;
+  background: rgba(2,6,23,.45); color: #e5e7eb;
+  border: 1px solid rgba(148,163,184,.28);
+  outline: none; min-width: 120px;
+}
+.inp:focus { border-color: rgba(99,102,241,.55); box-shadow: 0 0 0 3px rgba(99,102,241,.18); }
+
+/* Filters bar */
+.filters {
+  display: flex; gap: 12px; flex-wrap: wrap; align-items: center;
+  padding: 12px; margin-bottom: 14px;
+  background: rgba(30,41,59,.55);
+  border: 1px solid rgba(148,163,184,.22);
+  border-radius: 14px;
+}
+.filters label { display: flex; align-items: center; gap: 6px; color: #cbd5e1; font-size: 14px; }
+
+/* Buttons */
+.btn {
+  height: 34px; padding: 0 12px; border-radius: 999px;
+  border: 1px solid rgba(148,163,184,.28);
+  background: rgba(2,6,23,.35);
+  color: #e5e7eb; font-weight: 600;
+  display: inline-flex; align-items: center; gap: 8px;
+}
+.btn:hover { filter: brightness(1.08); border-color: rgba(99,102,241,.45); box-shadow: 0 8px 20px rgba(99,102,241,.18); }
+.btn:disabled { opacity: .5; cursor: not-allowed; }
+
+.btn-outline { background: rgba(2,6,23,.30); }
+.btn-primary { background: rgba(59,130,246,.25); border-color: rgba(59,130,246,.45); }
+.btn-accent  { background: rgba(139,92,246,.35); border-color: rgba(139,92,246,.55); }
+.btn-muted   { background: rgba(148,163,184,.18); border-color: rgba(148,163,184,.35); color: #e5e7eb; }
+.btn-success { background: rgba(16,185,129,.25); border-color: rgba(16,185,129,.45); color: #a7f3d0; }
+.btn-warning { background: rgba(251,146,60,.25); border-color: rgba(251,146,60,.45); color: #fed7aa; }
+.btn-danger  { background: rgba(239,68,68,.25); border-color: rgba(239,68,68,.45); color: #fecaca; }
+
+.icon.plus::before     { content: "+"; font-weight: 900; }
+.icon.refresh::before  { content: "⟳"; }
+
+/* Badges (roles) */
+.badge {
+  display: inline-block; padding: 4px 10px; border-radius: 999px; font-size: 12px; font-weight: 600;
+  border: 1px solid transparent;
+}
+.role-admin    { background: rgba(239,68,68,.18); color: #fecaca; border-color: rgba(239,68,68,.35); }
+.role-manager  { background: rgba(59,130,246,.18); color: #bfdbfe; border-color: rgba(59,130,246,.35); }
+.role-employee { background: rgba(16,185,129,.18); color: #a7f3d0; border-color: rgba(16,185,129,.35); }
+
+.warn { margin-right: 8px; color: #fca5a5; }
+.dots { color: #94a3b8; }
+.muted { color: #94a3b8; }
+.text-green { color: #34d399; font-weight: 600; }
+.text-red { color: #f87171; font-weight: 600; }
+
+/* Scroll area in Attendance */
+.scroll-area { max-height: 360px; overflow: auto; }
+.subhead { margin: 8px 4px 8px; font-weight: 600; color: #cbd5e1; }
+
+/* ===== Panel header icons (neutral monochrome SVGs) ===== */
+
+.title-icon,
+.title-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 10px;
+  background: rgba(148,163,184,0.12); /* subtle circle bg */
+  border: 1px solid rgba(148,163,184,0.25);
+}
+
+/* General styling for the mask */
+.title-icon::before,
+.title-chip::before {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  background-color: #e5e7eb; /* inherits theme, neutral */
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+}
+
+/* Dashboard (page title) */
+.page-title .title-icon::before {
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='white' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpath d='M3 3h18v18H3z'/%3E%3Cpath d='M3 9h18M9 21V9'/%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='white' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpath d='M3 3h18v18H3z'/%3E%3Cpath d='M3 9h18M9 21V9'/%3E%3C/svg%3E");
+}
+
+/* Users panel */
+.title-chip.users::before {
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='white' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpath d='M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2'/%3E%3Ccircle cx='9' cy='7' r='4'/%3E%3Cpath d='M23 21v-2a4 4 0 0 0-3-3.87'/%3E%3Cpath d='M16 3.13a4 4 0 0 1 0 7.75'/%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='white' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpath d='M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2'/%3E%3Ccircle cx='9' cy='7' r='4'/%3E%3Cpath d='M23 21v-2a4 4 0 0 0-3-3.87'/%3E%3Cpath d='M16 3.13a4 4 0 0 1 0 7.75'/%3E%3C/svg%3E");
+}
+
+/* Pending Leave panel */
+.title-chip.calendar::before {
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='white' stroke-width='2' viewBox='0 0 24 24'%3E%3Crect x='3' y='4' width='18' height='18' rx='2' ry='2'/%3E%3Cline x1='16' y1='2' x2='16' y2='6'/%3E%3Cline x1='8' y1='2' x2='8' y2='6'/%3E%3Cline x1='3' y1='10' x2='21' y2='10'/%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='white' stroke-width='2' viewBox='0 0 24 24'%3E%3Crect x='3' y='4' width='18' height='18' rx='2' ry='2'/%3E%3Cline x1='16' y1='2' x2='16' y2='6'/%3E%3Cline x1='8' y1='2' x2='8' y2='6'/%3E%3Cline x1='3' y1='10' x2='21' y2='10'/%3E%3C/svg%3E");
+}
+
+/* Attendance panel */
+.title-chip.clock::before {
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='white' stroke-width='2' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpolyline points='12 6 12 12 16 14'/%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='white' stroke-width='2' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpolyline points='12 6 12 12 16 14'/%3E%3C/svg%3E");
+}
+
+/* Panel icons for Admin Tasks page */
+.title-chip.assign::before {
+  /* check-square */
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='white' stroke-width='2' viewBox='0 0 24 24'%3E%3Crect x='3' y='3' width='18' height='18' rx='2' ry='2'/%3E%3Cpath d='M9 12l2 2 4-4'/%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='white' stroke-width='2' viewBox='0 0 24 24'%3E%3Crect x='3' y='3' width='18' height='18' rx='2' ry='2'/%3E%3Cpath d='M9 12l2 2 4-4'/%3E%3C/svg%3E");
+}
+
+.title-chip.library::before {
+  /* clipboard-list */
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='white' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpath d='M9 5h6M9 3h6a2 2 0 0 1 2 2v1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h1V5a2 2 0 0 1 2-2z'/%3E%3Cpath d='M9 12h6M9 16h6'/%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='white' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpath d='M9 5h6M9 3h6a2 2 0 0 1 2 2v1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h1V5a2 2 0 0 1 2-2z'/%3E%3Cpath d='M9 12h6M9 16h6'/%3E%3C/svg%3E");
+}
+/* ===== Glossy / overlay pill buttons ===== */
+
+/* Shared pill foundation (keeps current look for all buttons) */
+.btn {
+  position: relative;
+  overflow: hidden;          /* so our overlay stays inside the pill */
+}
+
+/* Gradient + soft glow like your "Check in" / "Create" */
+.btn-accent {
+  /* dual-tone base */
+ background: linear-gradient(135deg, rgba(139,92,246,0.95), rgba(99,102,241,0.85));
+  border: none;
+  border-radius: 9999px; /* full pill */
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(99,102,241,0.35);
+  transition: background 150ms, box-shadow 150ms;
+}
+
+.btn-accent:hover {
+  background: linear-gradient(135deg, rgba(139,92,246,1), rgba(99,102,241,0.95));
+  box-shadow: 0 8px 22px rgba(139,92,246,0.45);
+}
+
+/* glossy top highlight */
+.btn-accent::before {
+  content: "";
+  position: absolute;
+  inset: 1px 1px auto 1px;    /* top strip */
+  height: 55%;
+  border-radius: inherit;
+  background:
+    radial-gradient(120% 120% at 20% -40%, rgba(255,255,255,.35), transparent 60%),
+    linear-gradient(180deg, rgba(255,255,255,.22), rgba(255,255,255,0) 70%);
+  pointer-events: none;
+}
+
+/* subtle inner ring to sell the “overlay” depth */
+.btn-accent::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.06), inset 0 -8px 24px rgba(0,0,0,.25);
+  pointer-events: none;
+}
+
+
+
+/* (Optional) do the same for .btn-primary if you want a blue variant elsewhere */
+.btn-primary {
+  background: linear-gradient(180deg, rgba(59,130,246,.75), rgba(99,102,241,.70));
+  border-color: rgba(59,130,246,.55);
+  color: #eef2ff;
+  box-shadow: 0 6px 22px rgba(59,130,246,.32), inset 0 0 0 1px rgba(255,255,255,.06);
+}
+.btn-primary::before {
+  content: ""; position: absolute; inset: 1px 1px auto 1px; height: 55%;
+  border-radius: inherit;
+  background:
+    radial-gradient(120% 120% at 20% -40%, rgba(255,255,255,.35), transparent 60%),
+    linear-gradient(180deg, rgba(255,255,255,.20), rgba(255,255,255,0) 70%);
+  pointer-events: none;
+}
+.btn-primary::after {
+  content: ""; position: absolute; inset: 0; border-radius: inherit;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.06), inset 0 -8px 24px rgba(0,0,0,.25);
+  pointer-events: none;
+}
+
+/* Accent text used for task titles */
+.text-accent { color: #a78bfa; font-weight: 600; }

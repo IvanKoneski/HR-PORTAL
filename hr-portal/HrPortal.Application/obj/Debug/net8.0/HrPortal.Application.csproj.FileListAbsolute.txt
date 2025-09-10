@@ -1,0 +1,15 @@
+C:\Users\Ivan\Desktop\Dimplomska\App\hr-portal\HrPortal.Application\bin\Debug\net8.0\HrPortal.Application.deps.json
+C:\Users\Ivan\Desktop\Dimplomska\App\hr-portal\HrPortal.Application\bin\Debug\net8.0\HrPortal.Application.dll
+C:\Users\Ivan\Desktop\Dimplomska\App\hr-portal\HrPortal.Application\bin\Debug\net8.0\HrPortal.Application.pdb
+C:\Users\Ivan\Desktop\Dimplomska\App\hr-portal\HrPortal.Application\bin\Debug\net8.0\HrPortal.Domain.dll
+C:\Users\Ivan\Desktop\Dimplomska\App\hr-portal\HrPortal.Application\bin\Debug\net8.0\HrPortal.Domain.pdb
+C:\Users\Ivan\Desktop\Dimplomska\App\hr-portal\HrPortal.Application\obj\Debug\net8.0\HrPortal.Application.csproj.AssemblyReference.cache
+C:\Users\Ivan\Desktop\Dimplomska\App\hr-portal\HrPortal.Application\obj\Debug\net8.0\HrPortal.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ivan\Desktop\Dimplomska\App\hr-portal\HrPortal.Application\obj\Debug\net8.0\HrPortal.Application.AssemblyInfoInputs.cache
+C:\Users\Ivan\Desktop\Dimplomska\App\hr-portal\HrPortal.Application\obj\Debug\net8.0\HrPortal.Application.AssemblyInfo.cs
+C:\Users\Ivan\Desktop\Dimplomska\App\hr-portal\HrPortal.Application\obj\Debug\net8.0\HrPortal.Application.csproj.CoreCompileInputs.cache
+C:\Users\Ivan\Desktop\Dimplomska\App\hr-portal\HrPortal.Application\obj\Debug\net8.0\HrPortal.36292019.Up2Date
+C:\Users\Ivan\Desktop\Dimplomska\App\hr-portal\HrPortal.Application\obj\Debug\net8.0\HrPortal.Application.dll
+C:\Users\Ivan\Desktop\Dimplomska\App\hr-portal\HrPortal.Application\obj\Debug\net8.0\refint\HrPortal.Application.dll
+C:\Users\Ivan\Desktop\Dimplomska\App\hr-portal\HrPortal.Application\obj\Debug\net8.0\HrPortal.Application.pdb
+C:\Users\Ivan\Desktop\Dimplomska\App\hr-portal\HrPortal.Application\obj\Debug\net8.0\ref\HrPortal.Application.dll
